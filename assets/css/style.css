@@ -23,9 +23,10 @@ html{
 
 #nav > li{
     display: inline-block;
-    padding: 12px 24px;
+    /* padding: 0px 24px; */
     list-style: none;
     position: relative;
+    box-sizing: border-box;
 }
 
 a{
@@ -34,10 +35,15 @@ a{
     line-height: 23px;
     /* display: inline-block; */
     font-size: 15px;
+    display: block;
 }
+
+
 
 #nav > li > a{
     text-transform: uppercase;
+    line-height: 46px;
+    padding: 0px 24px;
 }
 
 #nav .subnav  {
@@ -77,6 +83,7 @@ a{
 
 #nav > li:hover > .subnav{
     display: block;
+    cursor: pointer;
 }
 
 
@@ -111,7 +118,6 @@ a{
 }
 
 #slider {
-    min-height: 1500px;
     background-color: #ccc;
     margin-top: 46px;
 }
