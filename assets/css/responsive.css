@@ -76,4 +76,8 @@
 	.name-email {
 		flex-direction: column;
 	}
+
+	#name-form {
+		margin-bottom: 8px;
+	}
 }
