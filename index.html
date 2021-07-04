@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The band</title>
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="icon" href="https://github.com/fluidicon.png" type="image/gif" sizes="16x16">
 </head>
@@ -31,6 +32,9 @@
 			</div>
 			<div class="search-btn">
 				<i class="search-icon fa fa-search"></i>
+			</div>
+			<div id="mobile-menu" class="mobile-menu-bar">
+				<i class="fas fa-bars"></i>
 			</div>
 		</div>
 	</div>
@@ -110,7 +114,7 @@
 		<p class="slogan">Fan? Drop a note!</p>
 		<div class="contact-info flex-layout">
 			<div class="main-info">
-				<p><i class="contact-icon fas fa-map-marker-alt"></i>Chicago, US</p>
+				<p><i class="contact-icon fas fa-map-marker-alt m-0"></i>Chicago, US</p>
 				<p><i class="contact-icon fas fa-phone-alt"></i>Phone: +00 151515</p>
 				<p><i class="contact-icon fas fa-envelope"></i>Email: mail@mail.com</p>
 			</div>
@@ -143,5 +147,34 @@
 			<div class="copyright">Powered by <a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm#contact">w3.css</a></div>
 		</div>
 	</div>
+
+	<script>
+		let header = document.getElementById('header')
+		let mobileMenu = document.getElementById('mobile-menu')
+		let headerHeight = header.clientHeight
+
+		mobileMenu.onclick = () => {
+			let isClosed = header.clientHeight === headerHeight 
+			if(isClosed) {
+				header.style.height = 'auto'
+			} else {
+				header.style.height = null
+				let a = header.va
+			}
+		}
+
+		let menuItems = document.querySelectorAll('.main-nav li a[href*="#"]')
+		for (let i = 0; i < menuItems.length; i++) {
+			let menuItem = menuItems[i]
+			menuItem.onclick = function(event) {
+				let isParentMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('sub-nav')
+				if (isParentMenu) {
+					event.preventDefault()
+				} else {
+					header.style.height = null
+				}
+			}
+		}
+	</script>
 </body>
 </html>

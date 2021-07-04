@@ -16,6 +16,7 @@ html {
 
 .box-content-layout {
 	width: 800px;
+	max-width: 100%;
 	padding: 64px 16px;
 	margin-left: auto;
 	margin-right: auto;
@@ -109,11 +110,16 @@ html {
 	cursor: pointer;
 }
 
+.mobile-menu-bar {
+	display: none;
+}
+
 .search-btn:hover {
 	background-color: #f44336;
 }
 
-.search-btn i {
+.search-btn i,
+.mobile-menu-bar i {
 	line-height: 46px;
 	padding: 0px 24px;
 	font-size: 15px;
@@ -187,7 +193,7 @@ html {
 }
 
 .member-avt {
-	width: 154px;
+	width: 60%;
 	border-radius: 4px;
 	margin: 0px 0px 16px;
 }
@@ -263,6 +269,7 @@ html {
 .place-name {
 	margin: 15px 0;
 	line-height: 22px;
+	font-weight: 550;
 }
 
 .place-date {
@@ -285,6 +292,7 @@ html {
 
 .main-info {
 	flex: 1;
+	margin-top: -10px;
 }
 
 .main-info p {
@@ -301,7 +309,6 @@ html {
 	font-size: 16px;
 }
 
-
 .form-info input {
 	padding: 8px;
 	line-height: 22px;
@@ -313,6 +320,10 @@ html {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 8px;
+}
+
+#name {
+	margin-right: 16px;
 }
 
 .mess-form input{
@@ -348,3 +359,5 @@ html {
 .copyright a {
 	color: rgba(0, 0, 0, 0.6);
 }
+
+/* Tablet */
